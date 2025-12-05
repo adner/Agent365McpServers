@@ -78,38 +78,6 @@ function YourMainContent({ themeColor, backgroundPattern }: { themeColor: string
     },
   }); 
 
-//  useCopilotAction({
-//     name: "ListDataverseEnvironments",
-//     available: "disabled",
-//     render: ({ args, result, status }) => {
-//       if (status !== "complete") {
-//         return (
-//           <div className=" bg-[#667eea] text-white p-4 rounded-lg max-w-md">
-//             <span className="animate-spin">⚙️ Retrieving weather!...</span>
-//           </div>
-//         );
-//       }
-
-//       const weatherResult: WeatherToolResult = {
-//         temperature: result?.temperature || 0,
-//         conditions: result?.conditions || "clear",
-//         humidity: result?.humidity || 0,
-//         windSpeed: result?.wind_speed || 0,
-//         feelsLike: result?.feels_like || result?.temperature || 0,
-//       };
-
-//       const themeColor = getThemeColor(weatherResult.conditions);
-
-//       return (
-//         <WeatherCard
-//           location={args.location}
-//           themeColor={themeColor}
-//           result={weatherResult}
-//         />
-//       );
-//     },
-//   });
-
 useDefaultTool({
   render: ({ name, args, status, result }) => {
     const isComplete = status === "complete";
